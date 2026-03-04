@@ -37,6 +37,7 @@ public class Etudiant extends Utilisateur{
     public void afficherProfil() {
         System.out.println("Etudiant " + nom + " " + prenom);
         System.out.println("Moyenne : " + calculerMoyenne());
+        System.out.println("Mention : " + getMention());
     }
 
     // Vérifier si l'étudiant a déjà une note pour ce cours
@@ -47,5 +48,23 @@ public class Etudiant extends Utilisateur{
             }
         }
         return false;
+    }
+
+    public String getMention() {
+
+        double moyenne = calculerMoyenne();
+
+        if (moyenne < 10) return "Ajourné";
+        else if (moyenne < 12) {
+            return "Passable";
+        } else if (moyenne < 14) {
+            return "Assez Bien";
+        }
+        else if (moyenne < 16) {
+            return "Bien";
+        }
+        else {
+            return "Très Bien";
+        }
     }
 }

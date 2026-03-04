@@ -27,7 +27,7 @@ public class Main {
             Cours reseau = new Cours(2L,"Réseau",2);
 
             prof.ajouterNote(e1, java,15);
-            prof.ajouterNote(e1, java, 10);
+            prof.ajouterNote(e1, reseau, 10);
 
             e1.afficherProfil();
 
